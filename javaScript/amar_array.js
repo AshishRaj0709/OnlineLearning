@@ -18,7 +18,7 @@
         }
     }
 
-    function sortAndDisplay() {
+    function Ascending() {
         if (numbersArray.length === 0) {
             document.getElementById("output").innerHTML = "Array is empty.";
         } else {
@@ -26,6 +26,23 @@
                 return a - b; // Sort numbers in ascending order
             });
 
+            var output = "";
+            for (var i = 0; i < numbersArray.length; i++) {
+                output += '<div class="square">' + numbersArray[i] + '</div>';
+            }
+            document.getElementById("output").innerHTML = output;
+        }
+    }
+
+    function Descending() {
+        if (numbersArray.length === 0) {
+            document.getElementById("output").innerHTML = "Array is empty.";
+        } else {
+            numbersArray.sort(function(a, b) {
+                return a - b; // Sort numbers in ascending order
+            });
+
+            numbersArray.reverse();
             var output = "";
             for (var i = 0; i < numbersArray.length; i++) {
                 output += '<div class="square">' + numbersArray[i] + '</div>';
