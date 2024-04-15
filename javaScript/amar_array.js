@@ -8,7 +8,11 @@
         if (!isNaN(number)) { // Check if input is a valid number
             numbersArray.push(number); // Add number to the array
             document.getElementById("inputField").value = ""; // Clear input field
-            document.getElementById("output").innerHTML = "Number added: " + number;
+            var array1="";
+            for (var i = 0; i < numbersArray.length; i++) {
+                array1 += '<div class="square">' + numbersArray[i] + '</div>';
+            }
+            document.getElementById("output").innerHTML = array1;
         } else {
             document.getElementById("output").innerHTML = "Please enter a valid number.";
         }
