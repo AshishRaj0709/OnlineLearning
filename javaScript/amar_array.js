@@ -50,3 +50,20 @@
             document.getElementById("output").innerHTML = output;
         }
     }
+
+    function Reset() {
+        if(numbersArray.length === 0)
+        {
+            document.getElementById("output").innerHTML = "Array is empty.";
+        }
+        else
+        {
+            var empArr = "";
+            for (var i = 0;i < numbersArray.length;i++)
+            {
+                numbersArray = [];
+                empArr += "Values Deleted";
+            }
+            document.getElementById("output").innerHTML = empArr;
+        }
+    }
