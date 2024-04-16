@@ -19,31 +19,65 @@
         <main>
             <div class="container">
                 <div class="implementation">
-                    <p>IMplementation area</p>
-                    <!-- <div class="show">
-                    123
-                </div> -->
+                   <div class="boxes" id="output"></div>
                 </div>
                 <div class="buttons">
-                    <!-- <div class="button">
-                    456
-                </div> -->
-                <div class="size">
-                    <input type="number" placeholder="Enter the size of Queue">
-                    <button>Enter</button>
-                    <button>Reset</button>
-                </div>
-                <div class="operation">
-                    <input type="number" placeholder="Enter a Number">
-                    <button>Enqueue</button>
-                    <button>Dequeue</button>
-                    <button>Empty</button>
-                </div>
-               
+                    <div class="operation">
+                        <input type="number" id="input" placeholder="Enter a Number">
+                        <button onclick="enqueue()" class="btn-enqueue">Enqueue</button>
+                        <button onclick="dequeue()" class="btn-dequeue">Dequeue</button>
+                        <button onclick="resetQueue()" class="btn-reset">Reset</button>
+                    </div>
+
                 </div>
             </div>
         </main>
     </div>
+
+    <script>
+        const queue = []
+
+        function enqueue() {
+            const inputElement = document.getElementById('input');
+            const element = inputElement.value.trim();
+
+            if (!element == '') {
+                queue.push(element)
+                updateQueue();
+                inputElement.value = '';
+            }
+            else {
+                alert("Enter a VALID Input")
+            }
+        }
+
+        function dequeue() {
+            if (queue.length == 0) {
+                alert('Queue is Empty')
+            }
+            else {
+                queue.shift()
+                updateQueue();
+            }
+
+        }
+
+        function resetQueue() {
+            queue.length = 0; 
+            updateQueue();
+        }
+
+        function updateQueue() {
+            const divElement = document.getElementById('output');
+            divElement.innerHTML = '';
+            queue.forEach(element => {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.textContent = element;
+                divElement.appendChild(box);
+            });
+        }
+    </script>
 
 </body>
 

@@ -5,7 +5,7 @@
 }
 
 .main-container {
-    background-color: rgb(0, 255, 42);
+    /* background-color: rgb(0, 255, 42); */
     height: 100vh;
 }
 
@@ -25,19 +25,22 @@ nav a {
 
 main {
     height: 90%;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
 }
 
 
 .container {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 95%;
 }
 
 .implementation {
-    background-color: rgb(249, 145, 10);
+    /* background-color: rgb(249, 145, 10); */
     height: 70%;
-    margin: 10px;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: ;
     max-height: 70%;
     /* min-height: 60%; */
 }
@@ -48,14 +51,18 @@ main {
     height: 95%;
 } */
 
+.boxes {
+    margin: 20px;
+}
+
 .buttons {
-    background-color: blueviolet;
-    height: 40%;
+    /* background-color: blueviolet; */
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin: 10px;
+    /* margin: 20px; */
     /* min-height: 40%; */
 }
 
@@ -75,12 +82,50 @@ main {
 
 .buttons button {
     height: 4rem;
-    width: 5rem;
+    width: 7rem;
     margin: 0px 10px;
+    border-radius: 5px;
+    font-weight: 800;
 }
+.btn-enqueue {
+    background-color: #04AA6D
+}
+
+.btn-enqueue:ho {
+    background-color: #04AA6D
+}
+
+.btn-dequeue {
+    background-color: #f44336;
+}
+
+.btn-reset {
+    background-color: #555555;
+}
+
+.buttons button:hover {background-color: #3e8e41}
 
 .buttons input {
     height: 4rem;
     width: 15rem;
     margin: 0px 10px;
 }
+
+.box {
+            display: inline-block;
+            height: 60px;
+            min-width: 60px;
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 10px;
+            margin-top: 20px;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: 800;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
